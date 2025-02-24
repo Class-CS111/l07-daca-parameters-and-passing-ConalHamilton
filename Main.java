@@ -210,4 +210,3 @@ public class Main
         return String.format("%02d/%02d/%4d", month, day, year);
     }
 }
-}
