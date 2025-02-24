@@ -20,29 +20,48 @@ public class Main
         String uscisNum, dateOfBirth, validDate, expireDate;
 
         //INITIALIZATION SECTION
-        surname = "CHAPETON-LAMAS";
-        givenName = "NERY";
-        uscisNum1 = 12;
-        uscisNum2 = 4;
-        uscisNum3 = 789;
-        category = "C09";
-        cardNum = "SRC9876543210";
-        birthCountry = "Guatemala";
-        termsAndConditions = "None";
+        //surname = "CHAPETON-LAMAS";
+        surname = UtilityBelt.readString("question: surname", 0, 144);
+        //givenName = "NERY";
+        givenName = UtilityBelt.readString("question: givenName", 0, 144);
+        //uscisNum1 = 12;
+        uscisNum1 = UtilityBelt.readInt("question: uscisNum1", 0, 1000);
+        //uscisNum2 = 4;
+        uscisNum2 = UtilityBelt.readInt("question: uscisNum2", 0, 1000);
+        //uscisNum3 = 789;
+        uscisNum3 = UtilityBelt.readInt("question: uscisNum3", 0, 1000);
+        //category = "C09";
+        category = UtilityBelt.readString("question: category", 0, 10);
+        //cardNum = "SRC9876543210";
+        cardNum = UtilityBelt.readString("question: cardNum", 0, 144);
+        //birthCountry = "Guatemala";
+        birthCountry = UtilityBelt.readString("question: birthCountry", 0, 144);
+        //termsAndConditions = "None";
+        termsAndConditions = UtilityBelt.readString("question: termsAndConditions", 0, 144);
 
-        birthDay = 1;
-        birthMonth = "JAN";
-        birthYear = 1970;
+        //birthDay = 1;
+        birthDay = UtilityBelt.readInt("question: birthDay", 1, 31);
+        //birthMonth = "JAN";
+        birthMonth = UtilityBelt.readString("question: birthMonth", 3, 3);
+        //birthYear = 1970;
+        birthYear = UtilityBelt.readInt("question: birthYear", 1900, 2020);
 
-        sex = 'M'; //note single quotes
+        //sex = 'M'; //note single quotes
+        sex = UtilityBelt.readChar("question: sex", "MF");
 
-        validMonth = 2;
-        validDay = 2;
-        validYear = 2020;
+        //validMonth = 2;
+        validMonth = UtilityBelt.readInt("question: validMonth", 1, 12);
+        //validDay = 2;
+        validDay = UtilityBelt.readInt("question: validDay", 1, 31);
+        //validYear = 2020;
+        validYear = UtilityBelt.readInt("question: validYear", 1900, 2040);
 
-        expireMonth = 2;
-        expireDay = 2;
-        expireYear = 2022;
+        //expireMonth = 2;
+        expireMonth = UtilityBelt.readInt("question: expireMonth", 1, 12);
+        //expireDay = 2;
+        expireDay = UtilityBelt.readInt("question: expireDay", 1, 31);
+        //expireYear = 2022;
+        expireYear = UtilityBelt.readInt("question: expireYear", 1900, 2040);
 
         //Strings to help clean up long printf's below
         uscisNum = String.format("%03d-%03d-%03d", uscisNum1, uscisNum2, uscisNum3);
